@@ -7,10 +7,7 @@ var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 var surname = prompt("Quale è il tuo cognome?");
 var list = document.getElementById("list");
 var position = document.getElementById("position")
-var result = "";
 listSurname.push(surname);
 listSurname.sort();
 list.innerHTML += listSurname;
-console.log(listSurname);
-listSurname.indexOf(surname);
 position.innerHTML = "Il congome inserito è in posizione " + (listSurname.indexOf(surname) + 1);
