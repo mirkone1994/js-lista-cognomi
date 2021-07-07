@@ -4,10 +4,15 @@
 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova*/
 
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
-var surname = prompt("Quale è il tuo cognome?");
+var surname = prompt("Quale è il tuo cognome?").toUpperCase();
 var list = document.getElementById("list");
-var position = document.getElementById("position")
+var position = document.getElementById("position");
 listSurname.push(surname);
 listSurname.sort();
-list.innerHTML += listSurname;
+var listItems = "";
+for(var i = 0; i < listSurname.length; i++) {
+    listItems += "<li>" + listSurname[i] + "</li>";
+}
+list.innerHTML += listItems;
 position.innerHTML = "Il congome inserito è in posizione " + (listSurname.indexOf(surname) + 1);
+console.log(listSurname);
