@@ -4,7 +4,10 @@
 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova*/
 
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
-var surname = prompt("Quale è il tuo cognome?").toUpperCase();
+var surname = prompt("Quale è il tuo cognome?");
+var firstLetter = surname.charAt(0).toUpperCase();
+var restOfSurname = surname.substring(1).toLocaleLowerCase();
+surname = firstLetter + restOfSurname;
 var list = document.getElementById("list");
 var position = document.getElementById("position");
 listSurname.push(surname);
